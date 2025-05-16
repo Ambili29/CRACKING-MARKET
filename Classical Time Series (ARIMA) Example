@@ -1,0 +1,6 @@
+from statsmodels.tsa.arima.model import ARIMA
+
+# Assume 'close_prices' is your time series
+model = ARIMA(close_prices, order=(5,1,0))
+model_fit = model.fit()
+forecast = model_fit.forecast(steps=30)
